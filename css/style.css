@@ -1,0 +1,130 @@
+.box {
+    height: 80vh;
+    width: 100%;
+    max-width: 70vw;
+    margin: 5rem auto;
+    border: 1px solid black;
+    background-image: url('../images/Img_1.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    box-shadow: 1px 2px 60px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+.surface{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 500%;
+    height: 14rem;
+    background-image: url("../images/Img_02.png");
+    background-repeat: repeat-x;
+    animation: none; /* انیمیشن به‌صورت پیش‌فرض غیرفعال است */
+    transition: transform 0.5s ease; /* برای حرکت نرم */
+}
+@keyframes moveRoad {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-80%);
+    }
+}
+.car{
+    position: absolute;
+    bottom: 1.2rem;
+    left: 18rem;
+}
+.animatedCar{
+    animation: suspension 1s linear infinite
+}
+@keyframes suspension {
+    100% {
+        transform: translateY(-1px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    0% {
+        transform: translateY(1px);
+    }
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+
+#btn-move, #btn-light {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+#btn-move {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+}
+
+#btn-light {
+    background: linear-gradient(135deg, #FFC107, #FF9800);
+    color: #333;
+}
+
+/* افکت hover */
+#btn-move:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(46, 125, 50, 0.3);
+}
+
+#btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255, 152, 0, 0.3);
+}
+
+/* افکت active (وقتی کلیک می‌کنید) */
+#btn-move:active {
+    transform: translateY(1px);
+}
+
+#btn-light:active {
+    transform: translateY(1px);
+}
+
+/* استایل برای حالت‌های فعال */
+#btn-move.running {
+    background: linear-gradient(135deg, #F44336, #D32F2F);
+}
+
+#btn-light.light-on {
+    background: linear-gradient(135deg, #2196F3, #0D47A1);
+    color: white;
+}
+.footer{
+    text-align: center;
+    font-size: 1.6rem;
+    font-family: Roboto;
+    margin-bottom: 5rem;
+    color: dimgray;
+}
+.footer span{
+    color: rgba(46, 125, 50, 0.8);
+}
+
+
+
