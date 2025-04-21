@@ -1,7 +1,6 @@
 .box {
     height: 80vh;
-    width: 100%;
-    max-width: 70vw;
+    width: 70vw;
     margin: 5rem auto;
     border: 1px solid black;
     background-image: url('../images/Img_1.png');
